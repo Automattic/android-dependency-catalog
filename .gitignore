@@ -1,0 +1,11 @@
+# OS X generated file
+.DS_Store
+
+# generated files
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle
+.gradle/
