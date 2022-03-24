@@ -5,7 +5,8 @@ plugins {
 
 catalog {
     versionCatalog {
-        plugin("android-gradle-plugin", "com.android.library").version("7.1.1")
+        plugin("androidGradlePlugin", "com.android.library").version("7.1.1")
+        plugin("kotlinAndroid", "org.jetbrains.kotlin.android").version("1.5.10")
     }
 }
 
