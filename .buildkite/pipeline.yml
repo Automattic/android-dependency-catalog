@@ -1,0 +1,11 @@
+common-params:
+  &docker-container
+  docker#v3.8.0:
+    image: "public.ecr.aws/automattic/android-build-image:v1.2.0"
+
+steps:
+  - label: "Build cache-generator"
+    plugins:
+      - *docker-container
+    command: |
+      ./gradlew -p cache-generator/ -P catalogVersion=0.1 build
