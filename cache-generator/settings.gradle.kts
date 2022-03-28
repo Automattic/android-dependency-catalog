@@ -15,7 +15,16 @@ pluginManagement {
 }
 dependencyResolutionManagement {
     repositories {
-        mavenLocal()
+        exclusiveContent {
+            forRepository {
+                maven {
+                    url = uri("https://a8c-libs.s3.amazonaws.com/android")
+                }
+            }
+            filter {
+                includeModule("com.automattic", "dependency-catalog")
+            }
+        }
         mavenCentral()
         google()
     }
