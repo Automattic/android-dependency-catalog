@@ -1,20 +1,10 @@
-common-params:
-  &docker-container
-  docker#v3.8.0:
-    image: "public.ecr.aws/automattic/android-build-image:v1.2.0"
-    propagate-environment: true
-    environment:
-      # DO NOT MANUALLY SET THESE VALUES!
-      # They are passed from the Buildkite agent to the Docker container
-      - "AWS_ACCESS_KEY"
-      - "AWS_SECRET_KEY"
+agents:
+  queue: "android"
 
 steps:
   - label: "Publish catalog"
     key: "publish"
     if: build.tag != null
-    plugins:
-      - *docker-container
     command:
       ./gradlew -p catalog prepareToPublishToS3 --tag-name=$BUILDKITE_TAG publishMavenPublicationToS3Repository
 
@@ -23,7 +13,6 @@ steps:
     depends_on:
       - "publish"
     plugins:
-      - *docker-container
       - automattic/bash-cache#v1.5.0
     command: |
       ./gradlew -p cache-generator/ -P catalogVersion=$BUILDKITE_TAG build
