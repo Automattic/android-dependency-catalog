@@ -24,13 +24,13 @@ steps:
       - "publish"
     plugins:
       - *docker-container
-      - automattic/bash-cache
+      - automattic/bash-cache#v2.1.0
     command: |
       ./gradlew -p cache-generator/ -P catalogVersion=$BUILDKITE_TAG build
 
       # https://docs.gradle.org/current/userguide/dependency_resolution.html#sub:cache_copy
       mkdir gradle-modules-cache \
-          && cp -r $HOME/.gradle/caches/modules-2 ./gradle-modules-cache \
+          && cp -r ~/.gradle/caches/modules-2 ./gradle-modules-cache \
           && find gradle-modules-cache/ -name "*.lock" -or -name "gc.properties" | xargs rm -r
 
       save_cache gradle-modules-cache "GRADLE-DEPENDENCIES-FOR-CATALOG-$BUILDKITE_TAG"
