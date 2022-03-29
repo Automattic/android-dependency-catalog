@@ -5,6 +5,7 @@ common-params:
 
 steps:
   - label: "Publish catalog"
+    key: "publish"
     if: build.tag != null
     plugins:
       - *docker-container
@@ -13,6 +14,8 @@ steps:
 
   - label: "Cache dependencies"
     if: build.tag != null
+    depends_on:
+      - "publish"
     plugins:
       - *docker-container
       - automattic/bash-cache
