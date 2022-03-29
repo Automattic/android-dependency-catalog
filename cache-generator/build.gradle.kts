@@ -7,6 +7,7 @@ plugins {
 android {
     defaultConfig {
         compileSdkVersion(31)
+        minSdkVersion(21)
     }
 }
 
