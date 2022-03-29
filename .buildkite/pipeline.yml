@@ -24,7 +24,7 @@ steps:
       - "publish"
     plugins:
       - *docker-container
-      - automattic/bash-cache#v2.1.0
+      - automattic/bash-cache#v1.5.0
     command: |
       ./gradlew -p cache-generator/ -P catalogVersion=$BUILDKITE_TAG build
 
