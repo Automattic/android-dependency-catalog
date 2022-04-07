@@ -1,0 +1,136 @@
+[versions]
+androidx-activity-compose = "1.4.0"
+androidx-activity-ktx = "1.4.0"
+androidx-annotation = "1.3.0"
+androidx-appcompat = "1.4.0"
+androidx-browser = "1.4.0"
+androidx-cardview = "1.0.0"
+androidx-compose = "1.1.1"
+androidx-constraintlayout = "2.1.3"
+androidx-core-ktx = "1.7.0"
+androidx-core-testing = "2.1.0"
+androidx-datastore-preferences = "1.0.0"
+androidx-fragment-ktx = "1.4.0"
+androidx-hilt-navigation-fragment = ":1.0.0"
+androidx-legacy-support-v4 = "1.0.0"
+androidx-lifecycle = "2.4.0"
+androidx-lifecycle-viewmodel-compose = "2.4.1"
+androidx-livedata-ktx = "2.4.0"
+androidx-navigation-fragment-ktx = "2.4.1"
+androidx-navigation-ui-ktx = "2.4.1"
+androidx-preference = "1.1.1"
+androidx-recyclerview = "1.2.1"
+androidx-recyclerview-selection = "1.1.0"
+androidx-test-espresso = "3.4.0"
+androidx-test-junit = "1.1.3"
+androidx-test-rules = "1.4.0"
+apache-commons-text = "1.8"
+apache-httpclient = "4.3.5.1"
+assertj-core = "3.11.1"
+automattic-about = "0.0.4"
+automattic-aztec = "v1.3.45"
+automattic-aztec-glide-loader = "v1.3.45"
+automattic-tracks = "2.2.0"
+chrisbanes-photoview = "2.3.0"
+commons-io = "2.11.0"
+dagger = "2.40.5"
+eventbus = "3.3.1"
+facebook-flipper = "0.138.0"
+facebook-shimmer = "0.5.0"
+facebook-soloader = "0.10.3"
+fastlane-screengrab = "2.1.1"
+firebase-messaging = "23.0.0"
+glide = "4.12.0"
+google-material = "1.4.0"
+google-material-compose-theme-adapter ="1.1.6"
+google-play-core = "1.10.3"
+google-play-services-auth = "20.1.0"
+junit = "4.13.2"
+kotlinx-coroutines = "1.5.2"
+leakcanary-android = "2.8.1"
+mockito-inline = "4.0.0"
+mockito-kotlin = "4.0.0"
+philjay-mpandroidchart = "v3.1.0"
+tinder-statemachine = "0.2.0"
+turbine = "0.7.0"
+wiremock = "2.26.3"
+wordpress-libaddressinput = "0.0.2"
+wordpress-utils = "2.3.0"
+zendesk-support = "5.0.8"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity-ktx" }
+androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "androidx-annotation" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-browser = { module = "androidx.browser:browser", version.ref = "androidx-browser" }
+androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "androidx-cardview" }
+androidx-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "androidx-compose" }
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "androidx-compose" }
+androidx-compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "androidx-compose" }
+androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "androidx-compose" }
+androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "androidx-compose" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core-ktx" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "androidx-core-testing" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "androidx-datastore-preferences" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment-ktx" }
+androidx-hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "androidx-hilt-navigation-fragment" }
+androidx-legacy-support-v4 = { module = "androidx.legacy:legacy-support-v4", version.ref = "androidx-legacy-support-v4" }
+androidx-lifecycle = { module = "androidx.lifecycle:lifecycle-process", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle-viewmodel-compose" }
+androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
+androidx-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-livedata-ktx" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation-fragment-ktx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation-ui-ktx" }
+androidx-preference = { module = "androidx.preference:preference", version.ref = "androidx-preference" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "androidx-recyclerview" }
+androidx-recyclerview-selection = { module = "androidx.recyclerview:recyclerview-selection", version.ref = "androidx-recyclerview-selection" }
+androidx-test-espresso-contrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "androidx-test-espresso" }
+androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-test-espresso" }
+androidx-test-espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "androidx-test-espresso" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-junit" }
+androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidx-test-rules" }
+apache-commons-text = { module = "org.apache.commons:commons-text", version.ref = "apache-commons-text" }
+apache-httpclient = { module = "org.apache.httpcomponents:httpclient-android", version.ref = "apache-httpclient" }
+assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj-core" }
+automattic-about = { module = "com.automattic:about", version.ref = "automattic-about" }
+automattic-aztec = { module = "com.github.wordpress-mobile.WordPress-Aztec-Android:aztec", version.ref = "automattic-aztec" }
+automattic-aztec-glide-loader = { module = "com.github.wordpress-mobile.WordPress-Aztec-Android:glide-loader", version.ref = "automattic-aztec" }
+automattic-tracks = { module = "com.automattic:Automattic-Tracks-Android", version.ref = "automattic-tracks" }
+chrisbanes-photoview = { module = "com.github.chrisbanes:PhotoView", version.ref = "chrisbanes-photoview" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commons-io" }
+dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "dagger" }
+dagger-android-support = { module = "com.google.dagger:dagger-android-support", version.ref = "dagger" }
+eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
+facebook-flipper = { module = "com.facebook.flipper:flipper", version.ref = "facebook-flipper" }
+facebook-flipper-network-plugin = { module = "com.facebook.flipper:flipper-network-plugin", version.ref = "facebook-flipper" }
+facebook-shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "facebook-shimmer" }
+facebook-soloader = { module = "com.facebook.soloader:soloader", version.ref = "facebook-soloader" }
+fastlane-screengrab = { module = "tools.fastlane:screengrab", version.ref = "fastlane-screengrab" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging-ktx", version.ref = "firebase-messaging" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
+google-material-compose-theme-adapter = { module = "com.google.android.material:compose-theme-adapter", version.ref = "google-material-compose-theme-adapter" }
+google-play-core = { module = "com.google.android.play:core", version.ref = "google-play-core" }
+google-play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "google-play-services-auth" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger" }
+hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "dagger" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
+junit = { module = "junit:junit", version.ref = "junit" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary-android" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito-inline" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
+philjay-mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "philjay-mpandroidchart" }
+tinder-statemachine = { module = "com.tinder.statemachine:statemachine", version.ref = "tinder-statemachine" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+wiremock = { module = "com.github.tomakehurst:wiremock", version.ref = "wiremock" }
+wordpress-libaddressinput = { module = "org.wordpress:libaddressinput.common", version.ref = "wordpress-libaddressinput" }
+wordpress-utils = { module = "org.wordpress:utils", version.ref = "wordpress-utils" }
+zendesk-support = { module = "com.zendesk:support", version.ref = "zendesk-support" }
