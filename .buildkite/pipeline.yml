@@ -1,9 +1,16 @@
+# Nodes with values to reuse in the pipeline.
+common_params:
+  # Common plugin settings to use with the `plugins` key.
+  - &common_plugins
+    - automattic/bash-cache#add/prepare_to_publish_to_s3_params
+
 agents:
   queue: "android"
 
 steps:
   - label: "Publish catalog"
     key: "publish"
+    plugins: *common_plugins
     command:
       ./gradlew -p catalog prepareToPublishToS3 $(prepare_to_publish_to_s3_params) publishMavenPublicationToS3Repository
       cat ./catalog/build/published-version.txt | buildkite-agent meta-data set "PUBLISHED_CATALOG_VERSION"
@@ -11,8 +18,7 @@ steps:
   - label: "Cache dependencies"
     depends_on:
       - "publish"
-    plugins:
-      - automattic/bash-cache#v1.5.0
+    plugins: *common_plugins
     command: |
       ./gradlew -p example -PcatalogVersion=$(buildkite-agent meta-data get "PUBLISHED_CATALOG_VERSION") build
 
