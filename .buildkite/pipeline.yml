@@ -5,9 +5,7 @@ steps:
   - label: "Publish catalog"
     key: "publish"
     command:
-      ./gradlew -p catalog \
-        prepareToPublishToS3 $(prepare_to_publish_to_s3_params) \
-        publishMavenPublicationToS3Repository
+      ./gradlew -p catalog prepareToPublishToS3 $(prepare_to_publish_to_s3_params) publishMavenPublicationToS3Repository
       cat ./catalog/build/published-version.txt | buildkite-agent meta-data set "PUBLISHED_CATALOG_VERSION"
 
   - label: "Cache dependencies"
@@ -16,9 +14,7 @@ steps:
     plugins:
       - automattic/bash-cache#v1.5.0
     command: |
-      ./gradlew -p example \
-        -PcatalogVersion=(buildkite-agent meta-data get "PUBLISHED_CATALOG_VERSION") \
-        build
+      ./gradlew -p example -PcatalogVersion=$(buildkite-agent meta-data get "PUBLISHED_CATALOG_VERSION") build
 
       # https://docs.gradle.org/current/userguide/dependency_resolution.html#sub:cache_copy
       mkdir gradle-modules-cache \
