@@ -12,19 +12,11 @@ steps:
     key: "publish"
     plugins: *common_plugins
     command: |
-      ./gradlew -p catalog prepareToPublishToS3 $(prepare_to_publish_to_s3_params) publishMavenPublicationToS3Repository
-      cat ./catalog/build/published-version.txt | buildkite-agent meta-data set "PUBLISHED_CATALOG_VERSION"
+      .buildkite/publish.sh
 
   - label: "Cache dependencies"
     depends_on:
       - "publish"
     plugins: *common_plugins
     command: |
-      ./gradlew -p example -PcatalogVersion=$(buildkite-agent meta-data get "PUBLISHED_CATALOG_VERSION") build
-
-      # https://docs.gradle.org/current/userguide/dependency_resolution.html#sub:cache_copy
-      mkdir gradle-modules-cache \
-          && cp -r ~/.gradle/caches/modules-2 ./gradle-modules-cache \
-          && find gradle-modules-cache/ -name "*.lock" -or -name "gc.properties" | xargs rm -r
-
-      save_cache gradle-modules-cache "GRADLE-DEPENDENCIES-FOR-CATALOG-$PUBLISHED_CATALOG_VERSION"
+      .buildkite/cache.sh
