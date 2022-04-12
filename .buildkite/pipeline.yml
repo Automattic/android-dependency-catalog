@@ -4,22 +4,25 @@ agents:
 steps:
   - label: "Publish catalog"
     key: "publish"
-    if: build.tag != null
     command:
-      ./gradlew -p catalog prepareToPublishToS3 --tag-name=$BUILDKITE_TAG publishMavenPublicationToS3Repository
+      ./gradlew -p catalog \
+        prepareToPublishToS3 $(prepare_to_publish_to_s3_params) \
+        publishMavenPublicationToS3Repository
+      cat ./catalog/build/published-version.txt | buildkite-agent meta-data set "PUBLISHED_CATALOG_VERSION"
 
   - label: "Cache dependencies"
-    if: build.tag != null
     depends_on:
       - "publish"
     plugins:
       - automattic/bash-cache#v1.5.0
     command: |
-      ./gradlew -p cache-generator/ -P catalogVersion=$BUILDKITE_TAG build
+      ./gradlew -p example \
+        -PcatalogVersion=(buildkite-agent meta-data get "PUBLISHED_CATALOG_VERSION") \
+        build
 
       # https://docs.gradle.org/current/userguide/dependency_resolution.html#sub:cache_copy
       mkdir gradle-modules-cache \
           && cp -r ~/.gradle/caches/modules-2 ./gradle-modules-cache \
           && find gradle-modules-cache/ -name "*.lock" -or -name "gc.properties" | xargs rm -r
 
-      save_cache gradle-modules-cache "GRADLE-DEPENDENCIES-FOR-CATALOG-$BUILDKITE_TAG"
+      save_cache gradle-modules-cache "GRADLE-DEPENDENCIES-FOR-CATALOG-$PUBLISHED_CATALOG_VERSION"
