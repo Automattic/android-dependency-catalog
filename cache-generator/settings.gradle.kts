@@ -1,4 +1,4 @@
-val catalogVersion: String by settings
+val catalogVersion: String? by settings
 pluginManagement {
     repositories {
         maven {
@@ -30,7 +30,11 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            from("com.automattic:dependency-catalog:$catalogVersion")
+            if (catalogVersion != null) {
+                from("com.automattic:dependency-catalog:$catalogVersion")
+            } else {
+                from(files("../libs.versions.toml"))
+            }
         }
     }
 }
