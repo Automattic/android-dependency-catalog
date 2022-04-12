@@ -1,7 +1,7 @@
 val versionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
 plugins {
-    alias(libs.plugins.androidGradlePlugin)
-    alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
