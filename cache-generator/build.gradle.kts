@@ -9,6 +9,9 @@ android {
         compileSdkVersion(31)
         minSdkVersion(21)
     }
+    lintOptions {
+        lintConfig = file("config/lint.xml")
+    }
 }
 
 dependencies {
