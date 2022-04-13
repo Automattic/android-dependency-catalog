@@ -7,9 +7,11 @@ PUBLISHED_CATALOG_VERSION=$(buildkite-agent meta-data get "PUBLISHED_CATALOG_VER
 
 ./gradlew -p example -PcatalogVersion="$PUBLISHED_CATALOG_VERSION" build
 
-# https://docs.gradle.org/current/userguide/dependency_resolution.html#sub:cache_copy
-mkdir gradle-modules-cache \
-  && cp -r ~/.gradle/caches/modules-2 ./gradle-modules-cache \
-  && find gradle-modules-cache/ -name "*.lock" -or -name "gc.properties" | xargs rm -r
+mkdir -p "$GRADLE_RO_DEP_CACHE"
 
-save_cache gradle-modules-cache "GRADLE-DEPENDENCIES-FOR-CATALOG-$PUBLISHED_CATALOG_VERSION"
+# https://docs.gradle.org/current/userguide/dependency_resolution.html#sub:cache_copy
+# Gradle suggests removing the "*.lock" files and the `gc.properties` file for saving/restoring cache
+cp -r ~/.gradle/caches/modules-2 "$GRADLE_RO_DEP_CACHE" \
+    && find "$GRADLE_RO_DEP_CACHE" -print0 -name "*.lock" -or -name "gc.properties" | xargs rm -r
+
+save_cache "$GRADLE_RO_DEP_CACHE" "GRADLE-DEPENDENCIES-FOR-CATALOG-$PUBLISHED_CATALOG_VERSION"
