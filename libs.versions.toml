@@ -11,6 +11,7 @@ androidx-constraintlayout = "2.1.3"
 androidx-core-ktx = "1.7.0"
 androidx-core-testing = "2.1.0"
 androidx-datastore-preferences = "1.0.0"
+androidx-exifinterface = "1.0.0"
 androidx-fragment-ktx = "1.4.0"
 androidx-hilt-navigation-fragment = "1.0.0"
 androidx-legacy-support-v4 = "1.0.0"
@@ -40,10 +41,12 @@ facebook-soloader = "0.10.3"
 fastlane-screengrab = "2.1.1"
 firebase-messaging = "23.0.0"
 glide = "4.12.0"
+google-autoService = "1.0-rc4"
 google-material = "1.4.0"
 google-material-compose-theme-adapter = "1.1.6"
 google-play-core = "1.10.3"
 google-play-services-auth = "20.1.0"
+json = "20190722"
 junit = "4.13.2"
 kotlin = "1.6.10"
 kotlinx-coroutines = "1.5.2"
@@ -51,6 +54,8 @@ leakcanary-android = "2.8.1"
 mockito-inline = "4.0.0"
 mockito-kotlin = "4.0.0"
 philjay-mpandroidchart = "v3.1.0"
+restAssured = "4.2.0"
+squareup-javapoet = "1.7.0"
 tinder-statemachine = "0.2.0"
 turbine = "0.7.0"
 wiremock = "2.26.3"
@@ -76,6 +81,7 @@ androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayo
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core-ktx" }
 androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "androidx-core-testing" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "androidx-datastore-preferences" }
+androidx-exifinterface = { module = "androidx.exifinterface:exifinterface", version.ref = "androidx-exifinterface" }
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment-ktx" }
 androidx-hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "androidx-hilt-navigation-fragment" }
 androidx-legacy-support-v4 = { module = "androidx.legacy:legacy-support-v4", version.ref = "androidx-legacy-support-v4" }
@@ -111,6 +117,7 @@ fastlane-screengrab = { module = "tools.fastlane:screengrab", version.ref = "fas
 firebase-messaging = { module = "com.google.firebase:firebase-messaging-ktx", version.ref = "firebase-messaging" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+google-autoService = { module = "com.google.auto.service:auto-service", version.ref = "google-autoService" }
 google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
 google-material-compose-theme-adapter = { module = "com.google.android.material:compose-theme-adapter", version.ref = "google-material-compose-theme-adapter" }
 google-play-core = { module = "com.google.android.play:core", version.ref = "google-play-core" }
@@ -119,6 +126,7 @@ hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagge
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger" }
 hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "dagger" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
+json = { module = "org.json:json", version.ref = "json" }
 junit = { module = "junit:junit", version.ref = "junit" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
@@ -127,6 +135,8 @@ leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", ve
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito-inline" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
 philjay-mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "philjay-mpandroidchart" }
+restAssured = { module = "io.rest-assured:rest-assured", version.ref = "restAssured" }
+squareup-javapoet = { module = "com.squareup:javapoet", version.ref = "squareup-javapoet" }
 tinder-statemachine = { module = "com.tinder.statemachine:statemachine", version.ref = "tinder-statemachine" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 wiremock = { module = "com.github.tomakehurst:wiremock", version.ref = "wiremock" }
