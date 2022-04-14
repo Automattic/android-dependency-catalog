@@ -26,9 +26,12 @@ dependencyResolutionManagement {
                 includeModule("com.automattic", "about")
                 includeModule("com.automattic", "dependency-catalog")
                 includeModule("org.wordpress", "aztec")
-                includeModule("org.wordpress.aztec", "glide-loader")
-                includeModule("org.wordpress", "utils")
                 includeModule("org.wordpress", "libaddressinput.common")
+                includeModule("org.wordpress", "utils")
+                includeModule("org.wordpress", "wellsql")
+                includeModule("org.wordpress.aztec", "glide-loader")
+                includeModule("org.wordpress.wellsql", "wellsql-annotations")
+                includeModule("org.wordpress.wellsql", "wellsql-processor")
             }
         }
         exclusiveContent {
