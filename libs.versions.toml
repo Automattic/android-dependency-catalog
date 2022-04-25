@@ -37,6 +37,7 @@ apache-commons-text = "1.8"
 apache-httpclient = "4.3.5.1"
 assertj-core = "3.19.0"
 automattic-about = "0.0.4"
+automattic-publishToS3 = "0.7.0"
 automattic-tracks = "2.2.0"
 chrisbanes-photoview = "2.3.0"
 commons-io = "2.11.0"
@@ -194,3 +195,7 @@ zendesk-support = { module = "com.zendesk:support", version.ref = "zendesk-suppo
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-android-extensions = { id = "org.jetbrains.kotlin.android.extensions", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+automattic-publishToS3 = { id = "com.automattic.android.publish-to-s3", version.ref = "automattic-publishToS3" }
