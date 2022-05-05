@@ -5,7 +5,7 @@ set -euo pipefail
 # Retrieve data from previous steps
 PUBLISHED_CATALOG_VERSION=$(buildkite-agent meta-data get "PUBLISHED_CATALOG_VERSION")
 
-./gradlew -p example -PcatalogVersion="$PUBLISHED_CATALOG_VERSION" build
+./gradlew :example:build -PcatalogVersion="$PUBLISHED_CATALOG_VERSION"
 
 mkdir -p "$GRADLE_RO_DEP_CACHE"
 

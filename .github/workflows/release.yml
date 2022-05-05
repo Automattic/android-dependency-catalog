@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        run: ./gradlew -p catalog generateCatalogAsToml
+        run: ./gradlew :catalog:generateCatalogAsToml
       - name: Upload Artifact to Job
         uses: actions/upload-artifact@v1
         with:
