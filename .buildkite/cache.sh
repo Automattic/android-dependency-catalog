@@ -14,6 +14,7 @@ mkdir -p "$GRADLE_RO_DEP_CACHE"
 # https://docs.gradle.org/current/userguide/dependency_resolution.html#sub:cache_copy
 # Gradle suggests removing the "*.lock" files and the `gc.properties` file for saving/restoring cache
 cp -r ~/.gradle/caches/modules-2 "$GRADLE_RO_DEP_CACHE" \
-    && find "$GRADLE_RO_DEP_CACHE" -print0 -name "*.lock" -or -name "gc.properties" | xargs rm -r
+    && find "$GRADLE_RO_DEP_CACHE" -name "*.lock" -type f -delete \
+    && find "$GRADLE_RO_DEP_CACHE" -name "gc.properties" -type f -delete
 
 save_cache "$GRADLE_RO_DEP_CACHE" "$S3_GRADLE_DEPENDENCY_CACHE_KEY"
