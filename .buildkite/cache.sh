@@ -4,8 +4,6 @@ set -euo pipefail
 
 # Retrieve data from previous steps
 PUBLISHED_CATALOG_VERSION=$(buildkite-agent meta-data get "PUBLISHED_CATALOG_VERSION")
-GRADLE_RO_DEP_CACHE="$HOME/.gradle_ro_dep_cache"
-S3_GRADLE_DEPENDENCY_CACHE_KEY="GRADLE_DEPENDENCY_CACHE"
 
 mkdir -p "$GRADLE_RO_DEP_CACHE"
 
@@ -17,4 +15,4 @@ cp -r ~/.gradle/caches/modules-2 "$GRADLE_RO_DEP_CACHE" \
     && find "$GRADLE_RO_DEP_CACHE" -name "*.lock" -type f -delete \
     && find "$GRADLE_RO_DEP_CACHE" -name "gc.properties" -type f -delete
 
-save_cache "$GRADLE_RO_DEP_CACHE" "$S3_GRADLE_DEPENDENCY_CACHE_KEY"
+save_cache "$GRADLE_RO_DEP_CACHE" "$GRADLE_DEPENDENCY_CACHE_KEY"
