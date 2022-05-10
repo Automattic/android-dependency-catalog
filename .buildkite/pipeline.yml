@@ -14,9 +14,10 @@ steps:
     command: |
       .buildkite/publish.sh
 
-      #  - label: "Cache dependencies"
-      #    depends_on:
-      #      - "publish"
-      #    plugins: *common_plugins
-      #    command: |
-      #      .buildkite/cache.sh
+  - label: "Cache dependencies"
+    depends_on:
+      - "publish"
+    if: build.tag != null
+    plugins: *common_plugins
+    command: |
+      .buildkite/cache.sh
