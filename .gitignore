@@ -9,3 +9,6 @@ local.properties
 
 # Gradle
 .gradle/
+
+# ripgrep ignore file
+.rgignore
