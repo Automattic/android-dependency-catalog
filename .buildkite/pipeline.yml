@@ -2,7 +2,7 @@
 common_params:
   # Common plugin settings to use with the `plugins` key.
   - &common_plugins
-    - automattic/bash-cache#2.3.0
+    - automattic/bash-cache#save-and-restore-gradle-dependency-cache
 
 agents:
   queue: "android"
@@ -20,4 +20,4 @@ steps:
     if: build.tag != null
     plugins: *common_plugins
     command: |
-      .buildkite/cache.sh
+      save_gradle_dependency_cache
