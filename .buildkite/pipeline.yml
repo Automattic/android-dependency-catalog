@@ -20,4 +20,4 @@ steps:
     if: build.tag != null
     plugins: *common_plugins
     command: |
-      save_gradle_dependency_cache
+      .buildkite/cache.sh
