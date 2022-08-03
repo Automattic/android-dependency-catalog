@@ -136,6 +136,7 @@ automattic-about = { module = "com.automattic:about", version.ref = "automattic-
 automattic-tracks = { module = "com.automattic:Automattic-Tracks-Android", version.ref = "automattic-tracks" }
 chrisbanes-photoview = { module = "com.github.chrisbanes:PhotoView", version.ref = "chrisbanes-photoview" }
 commons-io = { module = "commons-io:commons-io", version.ref = "commons-io" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
 facebook-flipper = { module = "com.facebook.flipper:flipper", version.ref = "facebook-flipper" }
 facebook-flipper-network-plugin = { module = "com.facebook.flipper:flipper-network-plugin", version.ref = "facebook-flipper" }
