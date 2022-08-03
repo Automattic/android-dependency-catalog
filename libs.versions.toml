@@ -37,6 +37,8 @@ apache-commons-text = "1.8"
 apache-httpclient = "4.3.5.1"
 assertj-core = "3.19.0"
 automattic-about = "0.0.4"
+automattic-configure = "0.6.5"
+automattic-fetchstyle = "1.1"
 automattic-publishToS3 = "0.7.0"
 automattic-tracks = "2.2.0"
 chrisbanes-photoview = "2.3.0"
@@ -201,4 +203,6 @@ kotlin-android-extensions = { id = "org.jetbrains.kotlin.android.extensions", ve
 kotlin-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+automattic-configure = { id = "com.automattic.android.configure", version.ref = "automattic-configure" }
+automattic-fetchstyle = { id = "com.automattic.android.fetchstyle", version.ref = "automattic-fetchstyle" }
 automattic-publishToS3 = { id = "com.automattic.android.publish-to-s3", version.ref = "automattic-publishToS3" }
