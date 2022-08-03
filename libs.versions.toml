@@ -42,6 +42,7 @@ automattic-tracks = "2.2.0"
 chrisbanes-photoview = "2.3.0"
 commons-io = "2.11.0"
 dagger = "2.42"
+detekt = "1.21.0"
 eventbus = "3.3.1"
 facebook-flipper = "0.138.0"
 facebook-shimmer = "0.5.0"
@@ -135,6 +136,7 @@ automattic-about = { module = "com.automattic:about", version.ref = "automattic-
 automattic-tracks = { module = "com.automattic:Automattic-Tracks-Android", version.ref = "automattic-tracks" }
 chrisbanes-photoview = { module = "com.github.chrisbanes:PhotoView", version.ref = "chrisbanes-photoview" }
 commons-io = { module = "commons-io:commons-io", version.ref = "commons-io" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
 facebook-flipper = { module = "com.facebook.flipper:flipper", version.ref = "facebook-flipper" }
 facebook-flipper-network-plugin = { module = "com.facebook.flipper:flipper-network-plugin", version.ref = "facebook-flipper" }
@@ -196,6 +198,7 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-android-extensions = { id = "org.jetbrains.kotlin.android.extensions", version.ref = "kotlin" }
+kotlin-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 automattic-publishToS3 = { id = "com.automattic.android.publish-to-s3", version.ref = "automattic-publishToS3" }
