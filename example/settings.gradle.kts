@@ -1,10 +1,16 @@
 val catalogVersion: String? by settings
 pluginManagement {
     repositories {
-        maven {
-            url = uri("https://a8c-libs.s3.amazonaws.com/android")
-            content {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    url = uri("https://a8c-libs.s3.amazonaws.com/android")
+                }
+            }
+            filter {
                 includeGroup("com.automattic.android")
+                includeGroup("com.automattic.android.configure")
+                includeGroup("com.automattic.android.fetchstyle")
                 includeGroup("com.automattic.android.publish-to-s3")
             }
         }

@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.android.library)
 
     alias(libs.plugins.android.application).apply(false)
+    alias(libs.plugins.automattic.configure).apply(false)
+    alias(libs.plugins.automattic.fetchstyle).apply(false)
     alias(libs.plugins.automattic.publishToS3).apply(false)
     alias(libs.plugins.kotlin.android).apply(false)
     alias(libs.plugins.kotlin.android.extensions).apply(false)
