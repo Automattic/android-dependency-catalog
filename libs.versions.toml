@@ -175,7 +175,7 @@ leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", ve
 mockito-android = { module = "org.mockito:mockito-android", version.ref = "mockito" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito" }
-mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
 nhaarman-mockito-kotlin = { module = "com.nhaarman.mockitokotlin2:mockito-kotlin", version.ref = "nhaarman-mockito-kotlin" }
 philjay-mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "philjay-mpandroidchart" }
 restAssured = { module = "io.rest-assured:rest-assured", version.ref = "restAssured" }
