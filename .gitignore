@@ -1,6 +1,9 @@
 # OS X generated file
 .DS_Store
 
+# IDE files
+.idea
+
 # generated files
 build/
 
