@@ -15,8 +15,8 @@ plugins {
 
 android {
     defaultConfig {
-        compileSdkVersion(31)
-        minSdkVersion(21)
+        compileSdkVersion(33)
+        minSdkVersion(24)
     }
     lintOptions {
         lintConfig = file("config/lint.xml")
