@@ -20,7 +20,7 @@ android {
         compileSdkVersion(33)
         minSdkVersion(24)
     }
-    lintOptions {
+    lint {
         lintConfig = file("config/lint.xml")
     }
 }
