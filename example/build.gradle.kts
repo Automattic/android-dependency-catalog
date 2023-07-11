@@ -14,6 +14,8 @@ plugins {
 }
 
 android {
+    namespace = "com.automattic.androidDependencyCatalog.example"
+
     defaultConfig {
         compileSdkVersion(33)
         minSdkVersion(24)
