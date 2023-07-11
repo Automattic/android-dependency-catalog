@@ -17,8 +17,8 @@ android {
     namespace = "com.automattic.androidDependencyCatalog.example"
 
     defaultConfig {
-        compileSdkVersion(33)
-        minSdkVersion(24)
+        compileSdk = 33
+        minSdk = 24
     }
     lint {
         lintConfig = file("config/lint.xml")
