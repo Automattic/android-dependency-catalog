@@ -12,11 +12,6 @@ jobs:
       uploadurl: ${{ steps.create_release.outputs.upload_url }}
     steps:
       - uses: actions/checkout@v2
-      - name: Set Up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-          distribution: 'corretto'
       - name: Extract Tag
         run: echo "TAG_NAME=${GITHUB_REF#refs/*/}" | xargs >> $GITHUB_ENV
       - name: Create Release
@@ -36,6 +31,11 @@ jobs:
     needs: [setup]
     steps:
       - uses: actions/checkout@v2
+      - name: Set Up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'corretto'
       - name: Build
         run: ./gradlew :catalog:generateCatalogAsToml
       - name: Upload Artifact to Job
