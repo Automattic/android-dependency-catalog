@@ -1,6 +1,6 @@
 pluginManagement {
     plugins {
-        id("com.automattic.android.publish-to-s3").version("0.7.0")
+        id("com.automattic.android.publish-to-s3").version("0.8.0")
     }
     repositories {
         maven {
