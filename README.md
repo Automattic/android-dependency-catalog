@@ -71,7 +71,7 @@ androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version
 * If you're updating an existing version, include any information you can find about what changed between the existing & new version in the pull request description
 * A new version catalog will be published by Buildkite with the version name: `{prNumber}-{commitSHA1}`. You can use this version to test your project. An easier way to test the version change is to temporarily override it in your project following [these instructions](https://docs.gradle.org/current/userguide/platforms.html#sec:overwriting-catalog-versions).
 * Review & merge the pull request to `trunk`
-* Create a new tag by incrementing the `MINOR` version in `MAJOR.MINOR.PATCH` format
+* Create a new tag by incrementing the `MINOR` version in `MAJOR.MINOR.PATCH` format: `git checkout trunk && git pull && git tag {VERSION} && git push origin {VERSION}`
 * Wait for GitHub Actions to create a new release draft and Buildkite to publish the version catalog
 * Publish the GitHub release draft by auto-generating the release notes and adding any other relevant information to it
 
