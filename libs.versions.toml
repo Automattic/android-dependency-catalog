@@ -82,6 +82,7 @@ wellsql = "2.0.0"
 wiremock = "2.26.3"
 wordpress-aztec = "v1.6.4"
 wordpress-libaddressinput = "0.0.2"
+wordpress-lint = "2.0.0"
 wordpress-utils = "3.6.1"
 zendesk-support = "5.0.8"
 
@@ -195,6 +196,7 @@ wiremock = { module = "com.github.tomakehurst:wiremock", version.ref = "wiremock
 wordpress-aztec = { module = "org.wordpress:aztec", version.ref = "wordpress-aztec" }
 wordpress-aztec-glide-loader = { module = "org.wordpress.aztec:glide-loader", version.ref = "wordpress-aztec" }
 wordpress-libaddressinput = { module = "org.wordpress:libaddressinput.common", version.ref = "wordpress-libaddressinput" }
+wordpress-lint = { module = "org.wordpress:lint", version.ref = "wordpress-lint" }
 wordpress-utils = { module = "org.wordpress:utils", version.ref = "wordpress-utils" }
 zendesk-support = { module = "com.zendesk:support", version.ref = "zendesk-support" }
 
