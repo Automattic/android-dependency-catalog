@@ -33,6 +33,7 @@ dependencyResolutionManagement {
                 includeModule("com.automattic", "dependency-catalog")
                 includeModule("org.wordpress", "aztec")
                 includeModule("org.wordpress", "libaddressinput.common")
+                includeModule("org.wordpress", "lint")
                 includeModule("org.wordpress", "utils")
                 includeModule("org.wordpress", "wellsql")
                 includeModule("org.wordpress.aztec", "glide-loader")
