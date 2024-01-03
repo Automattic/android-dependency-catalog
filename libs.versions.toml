@@ -83,7 +83,7 @@ wiremock = "2.26.3"
 wordpress-aztec = "v1.6.4"
 wordpress-libaddressinput = "0.0.2"
 wordpress-lint = "2.0.0"
-wordpress-utils = "3.6.1"
+wordpress-utils = "3.11.0"
 zendesk-support = "5.0.8"
 
 [libraries]
