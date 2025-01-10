@@ -1,6 +1,6 @@
 # Android Dependency Catalog
 
-This project is a shared Android dependency catalog for Automattic projects which uses [Gradle's version catalog feature](https://docs.gradle.org/current/userguide/platforms.html). It's also used for generating a dependency cache that we use in our CIs to speed up our builds.
+This project is a shared Android dependency catalog for Automattic projects which uses [Gradle's version catalog feature](https://docs.gradle.org/current/userguide/platforms.html).
 
 ## Table of Contents
 
@@ -10,7 +10,6 @@ This project is a shared Android dependency catalog for Automattic projects whic
 * [Releasing a new catalog version](#releasing-a-new-catalog-version)
 * [Naming conventions](#naming-conventions)
 * [Building locally](#building-locally)
-* [Dependency caching](#dependency-caching)
 * [Automatically updating dependency versions in the catalog](#automatically-updating-dependency-versions-in-the-catalog)
 * [Setting up your projects to automatically update the catalog version](#setting-up-your-projects-to-automatically-update-the-catalog-version)
 
@@ -61,7 +60,7 @@ See [Gradle documentation](https://docs.gradle.org/current/userguide/platforms.h
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "androidx-recyclerview" }
 ```
 * `version.ref` refers to the version name from `[versions]` section in the [libs.versions.toml](libs.versions.toml) file
-* If this is a new plugin, add it under `plugins` section in [example/build.gradle.kts](example/build.gradle.kts) - make sure to add `.apply(false)`. This step is necessary because we use the `example` module to generate a dependency cache we use to speed up CI in other projects. We are able to automatically add the library dependencies, so this step is not necessary, but plugins need to be added manually.
+* If this is a new plugin, add it under `plugins` section in [example/build.gradle.kts](example/build.gradle.kts) - make sure to add `.apply(false)`. We are able to automatically add the library dependencies, so this step is not necessary, but plugins need to be added manually.
 * [Build the catalog & example projects](#building-locally) - if you get `Could not find {dependency}` error, make sure the repository for the new dependency you've added is included in [example/settings.gradle.kts](example/settings.gradle.kts)
 * Follow the instructions for [releasing a new catalog version](#releasing-a-new-catalog-version)
 
@@ -92,12 +91,6 @@ We'll need to iterate on our naming conventions, but here are some general guide
 * Alternatively, you can run the example project using an already published catalog by running `./gradlew :example:build -PcatalogVersion={catalogVersion}` command.
 
 **Note that `example` project does NOT use the generated version catalog from the `catalog` project.** Although this is not likely to cause a difference in practice, it's an important distinction to be aware of.
-
-## Dependency caching
-
-We use the `example` project to generate a dependency cache which is uploaded to S3 by CI and then used in several projects.
-
-Note that all libraries within the version catalog will be automatically added as a dependency to the `example` project, but the plugins need to be added manually.
 
 ## Automatically updating dependency versions in the catalog
 
