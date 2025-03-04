@@ -1,3 +1,10 @@
+# 🚨 Repository Archived 🚨
+
+> [!WARNING]
+> **This repository has been archived** because it is no longer used. Only one library project was using this functionality but this project has been archived as well: [FluxC](https://github.com/wordpress-mobile/WordPress-FluxC-Android)
+
+---
+
 # Android Dependency Catalog
 
 This project is a shared Android dependency catalog for Automattic projects which uses [Gradle's version catalog feature](https://docs.gradle.org/current/userguide/platforms.html).
